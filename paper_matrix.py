@@ -8,6 +8,9 @@
 http://twitter.com/maxtuno
 http://klout.com/maxtuno
 http://independent.academia.edu/oarr
+
+https://www.academia.edu/31770840/Elements_Of_Universal_Number_Theory
+https://github.com/maxtuno/UNT_Book
 """
 
 import random
