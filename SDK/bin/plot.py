@@ -7,6 +7,7 @@ for data, label in datalist:
 
 pylab.legend()
 pylab.title("UNT v/s GPU")
-pylab.xlabel("TIME (s)")
-pylab.ylabel("SIZE")
+pylab.xlabel("SIZE")
+pylab.ylabel("TIME (s)")
 pylab.savefig('unt_vs_gpu.png')
+
