@@ -26,6 +26,13 @@ typedef boost::multiprecision::cpp_int integer;
 namespace unt {
     class matrix {
     public:
+
+        size_t _bits;
+        size_t _n;
+        size_t _m;
+
+        integer universe = 0;
+
         matrix(size_t bits, size_t n, size_t m, integer universe = 0) : _bits(bits), _n(n), _m(m), universe(universe) {}
 
         inline void insert(size_t idx, integer element) {
@@ -47,6 +54,11 @@ namespace unt {
             return bits;
         }
 
+        inline matrix operator&=(const matrix& rhs) {
+            universe &= rhs.universe;
+            return *this;
+        }
+
         inline std::vector<integer> to_classical_mathematics() {
             std::vector<integer> formated;
             auto bits = binary();
@@ -57,13 +69,6 @@ namespace unt {
             }
             return formated;
         }
-
-        integer universe = 0;
-        
-    private:
-        size_t _bits;
-        size_t _n;
-        size_t _m;
     };
 }
 
